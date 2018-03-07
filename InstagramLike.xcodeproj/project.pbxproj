@@ -11,6 +11,9 @@
 		52543D5D204E8123006CF503 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52543D5C204E8123006CF503 /* UserCell.swift */; };
 		52543D5F204E81D3006CF503 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52543D5E204E81D3006CF503 /* UserViewController.swift */; };
 		52543D64204E8498006CF503 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52543D63204E8498006CF503 /* User.swift */; };
+		52909C1E20501C0E00C2273B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52909C1D20501C0E00C2273B /* FeedViewController.swift */; };
+		52909C2020501C7F00C2273B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52909C1F20501C7F00C2273B /* Post.swift */; };
+		52909C2220501D2300C2273B /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52909C2120501D2300C2273B /* PostCell.swift */; };
 		529D89E9204D308400ABC343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D89E8204D308400ABC343 /* AppDelegate.swift */; };
 		529D89EE204D308400ABC343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529D89EC204D308400ABC343 /* Main.storyboard */; };
 		529D89F0204D308400ABC343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529D89EF204D308400ABC343 /* Assets.xcassets */; };
@@ -21,6 +24,7 @@
 		529D8A02204D317600ABC343 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8A01204D317600ABC343 /* SignUpViewController.swift */; };
 		529D8A04204D355000ABC343 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8A03204D355000ABC343 /* LoginViewController.swift */; };
 		52F775D3204FB6A100DF97B7 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F775D2204FB6A100DF97B7 /* UploadViewController.swift */; };
+		52F775D5204FCCAF00DF97B7 /* ㅇ001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F775D4204FCCAF00DF97B7 /* ㅇ001.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,9 @@
 		52543D5C204E8123006CF503 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		52543D5E204E81D3006CF503 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		52543D63204E8498006CF503 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52909C1D20501C0E00C2273B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		52909C1F20501C7F00C2273B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		52909C2120501D2300C2273B /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		529D89E5204D308400ABC343 /* InstagramLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529D89E8204D308400ABC343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529D89ED204D308400ABC343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +48,7 @@
 		529D8A01204D317600ABC343 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		529D8A03204D355000ABC343 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52F775D2204FB6A100DF97B7 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		52F775D4204FCCAF00DF97B7 /* ㅇ001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ㅇ001.jpg"; sourceTree = "<group>"; };
 		8538B401C2A25812FD24F048 /* Pods-InstagramLike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramLike.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramLike/Pods-InstagramLike.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +71,7 @@
 				529D8A03204D355000ABC343 /* LoginViewController.swift */,
 				52543D5E204E81D3006CF503 /* UserViewController.swift */,
 				52F775D2204FB6A100DF97B7 /* UploadViewController.swift */,
+				52909C1D20501C0E00C2273B /* FeedViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -70,6 +79,7 @@
 		52543D61204E8455006CF503 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				52909C1F20501C7F00C2273B /* Post.swift */,
 				52543D63204E8498006CF503 /* User.swift */,
 			);
 			path = Objects;
@@ -79,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				52543D5C204E8123006CF503 /* UserCell.swift */,
+				52909C2120501D2300C2273B /* PostCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 		529D89FA204D30A000ABC343 /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				52F775D4204FCCAF00DF97B7 /* ㅇ001.jpg */,
 				529D89FB204D30A000ABC343 /* main.png */,
 				529D89FC204D30A000ABC343 /* sign.png */,
 			);
@@ -212,6 +224,7 @@
 				529D89F0204D308400ABC343 /* Assets.xcassets in Resources */,
 				529D89EE204D308400ABC343 /* Main.storyboard in Resources */,
 				529D8A00204D314C00ABC343 /* GoogleService-Info.plist in Resources */,
+				52F775D5204FCCAF00DF97B7 /* ㅇ001.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +301,10 @@
 				52543D64204E8498006CF503 /* User.swift in Sources */,
 				529D8A04204D355000ABC343 /* LoginViewController.swift in Sources */,
 				529D8A02204D317600ABC343 /* SignUpViewController.swift in Sources */,
+				52909C2020501C7F00C2273B /* Post.swift in Sources */,
+				52909C1E20501C0E00C2273B /* FeedViewController.swift in Sources */,
 				529D89E9204D308400ABC343 /* AppDelegate.swift in Sources */,
+				52909C2220501D2300C2273B /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
