@@ -12,7 +12,44 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
+    //인디케이터 객체
+    var actIdc = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    var container: UIView!
+    
+     //AppDelegate 객체
+    class func instance() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    
+    //인디케이터 시작
+    func showActivityIndicator(){
+        if let window = window{
+            print("showActivityIndicator 인디케이터 호출")
+            container = UIView()
+            container.frame = window.frame
+            container.center = window.center
+            container.backgroundColor = UIColor(white:0, alpha:0.2)
+            //actIdc.color = UIColor.black
+            actIdc.frame = CGRect(x: 0 , y: 0, width:40, height:40)
+            actIdc.hidesWhenStopped = true
+            actIdc.center = CGPoint(x: container.frame.size.width / 2, y: container.frame.size.height / 2)
+            container.addSubview(actIdc)
+            window.addSubview(container)
+            
+            actIdc.startAnimating()
+        }
+    }
+    
+    //인디케이터 삭제
+    func dissmissActivityIndicator(){
+        if let _ = window{
+            print("dissmiss 인디케이터 호출")
+            container.removeFromSuperview()
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
