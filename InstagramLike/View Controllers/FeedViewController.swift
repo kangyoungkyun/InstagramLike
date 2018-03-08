@@ -20,6 +20,9 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionview: UICollectionView!
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("feedViewController viewdidload")
@@ -84,16 +87,24 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
                                                 posst.userID = userID
                                                 posst.postID = postID
                                                 posst.pathToImage = pathToImage
+                                                
+                                                //좋아요 버튼 누른 사람 담아주기
+                                                if let people = post["peopleWhoLike"] as? [String:AnyObject]{
+                                                    for(_,person) in people{
+                                                        posst.peopleWhoLike.append(person as! String)
+                                                    }
+                                                }
+                                                
                                                 //객체를 배열에 하나씩 담아준다.
                                                 self.posts.append(posst)
                                                 print("posts 하나 넣었따 개수는? \(self.posts.count)")
                                             }
                                         }
                                     }
-                                    //self.collectionview.reloadData()
-                                     DispatchQueue.main.async(execute: {
+                                   
+                                     //DispatchQueue.main.async(execute: {
                                        self.collectionview.reloadData()
-                                    })
+                                    //})
                                 }
                             }
                         })
@@ -118,11 +129,27 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     //셀 구성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //self.collectionview.reloadData()
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         // 셀만들어 주기
         cell.postImage.downloadImage(from: self.posts[indexPath.row].pathToImage)
         cell.authorLabel.text = self.posts[indexPath.row].author
         cell.likeLabel.text = "\(self.posts[indexPath.row].likes!) Likes"
+        
+        print("좋아요개수 좋아요 개수 cell for row at : \(String(describing: cell.likeLabel.text))")
+        
+        //cell에 포스트 아이디 넣어주기
+        cell.postID = self.posts[indexPath.row].postID
+        
+        //Post 데이터 모델에서 peopleWhoLike 변수 배열에서 user 가져와서 있으면 like 버튼 hidden
+        for person in self.posts[indexPath.row].peopleWhoLike{
+            if person == Auth.auth().currentUser?.uid{
+                cell.likeBtn.isHidden = true
+                cell.unlikeBtn.isHidden = false
+                break
+            }
+        }
+        
         return cell
         
     }
